@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "harmonix"
+version = "0.1.0"
+description = "Modal whole-brain simulation: evolve eigenmode amplitudes, not node-wise ODEs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Rodrigo Debona", email = "rdneuro@users.noreply.github.com" }]
+keywords = ["neuroscience", "whole-brain-model", "eigenmodes", "spectral-geometry",
+            "connectome", "criticality", "functional-connectivity", "hopf",
+            "laplace-beltrami", "modal-dynamics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "joblib>=1.2",
+]
+
+[project.optional-dependencies]
+torch = ["torch>=2.0"]
+jax = ["jax>=0.4", "jaxlib>=0.4"]
+cupy = ["cupy-cuda12x>=12.0"]
+viz = ["matplotlib>=3.6", "seaborn>=0.12", "nilearn>=0.10"]
+lbo = ["lapy>=1.0"]
+parallel = ["threadpoolctl>=3.0"]
+all = [
+    "matplotlib>=3.6", "seaborn>=0.12", "nilearn>=0.10",
+    "lapy>=1.0", "threadpoolctl>=3.0",
+]
+dev = [
+    "pytest>=7.0", "pytest-cov>=4.0",
+    "matplotlib>=3.6", "seaborn>=0.12", "threadpoolctl>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/rdneuro/harmonix"
+Repository = "https://github.com/rdneuro/harmonix"
+Issues = "https://github.com/rdneuro/harmonix/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/harmonix"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/harmonix", "tests", "examples", "README.md", "LICENSE", "CHANGELOG.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
