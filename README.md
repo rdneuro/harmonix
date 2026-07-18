@@ -1,6 +1,23 @@
-# harmonix
+<p align="center">
+  <img src="assets/logo.png" alt="harmonix logo" width="440"/>
+</p>
 
-**Modal whole-brain simulation** — evolve the *amplitudes of eigenmodes*, not node-wise ODEs.
+<h1 align="center">harmonix</h1>
+
+<p align="center">
+  <strong>Modal whole-brain simulation</strong> — evolve the <em>amplitudes of eigenmodes</em>, not node-wise ODEs.
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-0072B2.svg?style=flat-square"></a>
+  <img alt="Python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-0072B2.svg?style=flat-square&logo=python&logoColor=white">
+  <img alt="Version 0.1.0" src="https://img.shields.io/badge/version-0.1.0-009E73.svg?style=flat-square">
+  <img alt="Status: beta" src="https://img.shields.io/badge/status-beta-CC79A7.svg?style=flat-square">
+  <img alt="Tests: 55 passing" src="https://img.shields.io/badge/tests-55%20passing-009E73.svg?style=flat-square">
+  <img alt="Backends" src="https://img.shields.io/badge/backends-numpy%20%7C%20torch%20%7C%20jax%20%7C%20cupy-D55E00.svg?style=flat-square">
+  <img alt="Built with" src="https://img.shields.io/badge/built%20with-numpy%20%C2%B7%20scipy-56B4E9.svg?style=flat-square">
+  <img alt="Code style" src="https://img.shields.io/badge/docstrings-NumPy-E69F00.svg?style=flat-square">
+</p>
 
 harmonix expands brain activity in an eigenbasis,
 
